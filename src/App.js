@@ -64,13 +64,14 @@ function App() {
     if (progress >= 50) {
       setScreen(2);
     }
-    if (progress < 50) {
-      setScreen(1);
-    }
   }, [progress]);
 
   const onProgressSwitch=ev=>{
     setProgress(0);
+    setScreen(1);
+    setRadioInputsSelected(new Set());
+    setSelectInputsSelected(new Set());
+    setTextInputChanged(new Set());
   }
   
   return (
